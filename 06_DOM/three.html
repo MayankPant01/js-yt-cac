@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAC</title>
+</head>
+<body style="background-color: #212121; color: #fff\
+;"">
+    
+</body>
+<script>
+    const divv = document.createElement('div')
+    console.log(divv);
+    divv.className = "main"; 
+    divv.id = "myId"; 
+    divv.id = Math.random()*10 + 1;
+    divv.id = Math.round(divv.id)
+    console.log(divv.id)
+    divv.setAttribute("title", "Generated Title");
+    divv.style.backgroundColor = "green"
+    divv.style.padding = "12px"
+    // divv.innerText = "Mayank"
+    const addText = document.createTextNode("CAC")
+    divv.appendChild(addText)                   
+    document.body.appendChild(divv)    
+
+</script>
+</html>    
