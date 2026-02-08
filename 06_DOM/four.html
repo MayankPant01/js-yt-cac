@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAc</title>
+</head>
+<body style="background-color: #212121; color: white;">
+    <ul class="language">
+        <li>Javascript</li></ul>
+</body>
+<script>
+    function addLang(langName){
+        const li = document.createElement('li');
+        li.innerHTML = `${langName}`
+        document.querySelector('.language').appendChild(li)
+    }
+
+    addLang("Python")
+    addLang("Java")
+
+    //OPTIMIZED WAY (Alternative to append method)
+
+    function addOptiLanguage(langName){
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langName))            
+        document.querySelector('.language').appendChild(li)
+        
+    }
+    addOptiLanguage('golang')
+
+    //Edit
+    const secondLang = document.querySelector("li:nth-child(2)")
+    // secondLang.innerHTML = "Rust" //Less Optimized
+    const newLi = document.createElement('li')
+    newLi.textContent = "Rust"
+    secondLang.replaceWith(newLi) //More optimized
+    
+    const firstLang = document.querySelector("li:nth-child(1)")
+    // firstLang.textContent = "Typescript"
+    firstLang.outerHTML = '<li>Typscript</li>'
+
+
+    //Remove
+    const lastLang = document.querySelector("li:last-child")
+    lastLang.remove()
+    
+
+     
+
+
+
+</script>
+</html> 
